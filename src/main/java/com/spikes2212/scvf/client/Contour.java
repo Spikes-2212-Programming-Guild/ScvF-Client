@@ -1,6 +1,6 @@
 package com.spikes2212.scvf.client;
 
-import com.spikes2212.scvf.client.strategies.ContourStrategy;
+import com.spikes2212.scvf.client.strategies.ContourMiddleware;
 
 public interface Contour {
 
@@ -22,5 +22,5 @@ public interface Contour {
 
     boolean isUpdated();
 
-    void use(ContourStrategy strategy);
+    void use(ContourMiddleware middleware);
 }
