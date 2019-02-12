@@ -4,6 +4,8 @@ import com.spikes2212.scvf.client.strategies.ContourMiddleware;
 
 public interface Contour {
 
+    int getId();
+
     double getX();
     double getY();
 

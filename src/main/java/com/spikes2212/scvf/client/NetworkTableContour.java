@@ -13,9 +13,12 @@ public class NetworkTableContour implements Contour {
 
     private List<ContourMiddleware> middlewares;
 
+    private int id;
+
     protected NetworkTableContour(NetworkTable table, int id) {
         this.source = new NetworkTableDataSource(table, id);
         this.middlewares = new LinkedList<>();
+        this.id = id;
     }
 
     protected double applyMiddlewareOnXAxis(double x) {
@@ -32,6 +35,11 @@ public class NetworkTableContour implements Contour {
             result = middleware.processYAxis(result);
         }
         return result;
+    }
+
+    @Override
+    public int getId() {
+        return id;
     }
 
     @Override
