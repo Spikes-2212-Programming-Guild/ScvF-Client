@@ -15,5 +15,5 @@ public interface Contour {
 
     boolean isUpdated();
 
-    void use(ContourMiddleware middleware);
+    Contour use(ContourMiddleware middleware);
 }

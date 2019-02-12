@@ -70,8 +70,9 @@ public class NetworkTableContour implements Contour {
     }
 
     @Override
-    public void use(ContourMiddleware middleware) {
+    public Contour use(ContourMiddleware middleware) {
         middlewares.add(middleware);
+        return this;
     }
 
 }
