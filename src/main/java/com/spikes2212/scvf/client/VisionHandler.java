@@ -22,6 +22,11 @@ public class VisionHandler {
 
     }
 
+
+    public Contour generateContour(int id) {
+        return new NetworkTableContour(table, id);
+    }
+
     public VisionHandler(int cameraWidth, int cameraHeight) {
         this(cameraWidth, cameraHeight, "ImageProcessing");
     }
@@ -37,5 +42,4 @@ public class VisionHandler {
     public void setPipeline(String pipeline) {
         pipelineNameEntry.setString(pipeline);
     }
-
 }
