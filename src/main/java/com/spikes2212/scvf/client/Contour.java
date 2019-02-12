@@ -1,5 +1,7 @@
 package com.spikes2212.scvf.client;
 
+import com.spikes2212.scvf.client.strategies.ContourStrategy;
+
 public interface Contour {
 
     enum OutputType {
