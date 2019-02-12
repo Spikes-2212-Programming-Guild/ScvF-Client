@@ -19,4 +19,6 @@ public interface Contour {
     double getCenterY();
 
     boolean isUpdated();
+
+    void use(ContourStrategy strategy);
 }
