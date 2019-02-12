@@ -8,7 +8,7 @@ public class NetworkTableDataSource {
     private NetworkTable table;
     private int id;
 
-    public NetworkTableDataSource(NetworkTable table, int id) {
+    protected NetworkTableDataSource(NetworkTable table, int id) {
         this.table = table;
         this.id = id;
     }
