@@ -7,7 +7,7 @@ public class ContourTracker {
 
     private Map<Integer, Contour> contours = new HashMap<>();
 
-    public void trackContour(Contour contour) {
+    public void track(Contour contour) {
         contours.put(contour.getId(), contour);
     }
 
