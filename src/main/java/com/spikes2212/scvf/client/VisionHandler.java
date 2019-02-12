@@ -4,6 +4,8 @@ import edu.wpi.first.networktables.NetworkTable;
 import edu.wpi.first.networktables.NetworkTableEntry;
 import edu.wpi.first.networktables.NetworkTableInstance;
 
+import java.util.List;
+
 public class VisionHandler {
 
     private int cameraWidth, cameraHeight;
@@ -25,6 +27,9 @@ public class VisionHandler {
 
     }
 
+    public VisionHandler(int cameraWidth, int cameraHeight) {
+        this(cameraWidth, cameraHeight, "ImageProcessing");
+    }
 
     public Contour generateContour(int id) {
         Contour contour = new NetworkTableContour(table, id);
@@ -32,8 +37,8 @@ public class VisionHandler {
         return contour;
     }
 
-    public VisionHandler(int cameraWidth, int cameraHeight) {
-        this(cameraWidth, cameraHeight, "ImageProcessing");
+    public List<Contour> getUpdatedContours() {
+        return contourTracker.getUpdated();
     }
 
     public void setExposure(double exposure) {
