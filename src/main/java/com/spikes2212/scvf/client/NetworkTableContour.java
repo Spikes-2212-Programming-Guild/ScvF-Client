@@ -7,10 +7,22 @@ public class NetworkTableContour implements Contour {
 
     private NetworkTable table;
     private int id;
+    private OutputType type;
 
-    protected NetworkTableContour(NetworkTable table, int id) {
+    protected NetworkTableContour(NetworkTable table, int id, OutputType type) {
         this.table = table;
         this.id = id;
+        setOutputType(type);
+    }
+
+    @Override
+    public void setOutputType(OutputType type) {
+        this.type = type;
+    }
+
+    @Override
+    public OutputType getOutputType() {
+        return type;
     }
 
     @Override
