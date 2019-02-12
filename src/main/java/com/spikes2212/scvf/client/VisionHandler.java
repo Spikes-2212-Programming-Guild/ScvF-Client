@@ -10,6 +10,8 @@ public class VisionHandler {
 
     private NetworkTable table;
 
+    private ContourTracker contourTracker;
+
     private NetworkTableEntry pipelineNameEntry, cameraIdEntry, exposureEntry;
 
     public VisionHandler(int cameraWidth, int cameraHeight, String tableName) {
@@ -19,12 +21,15 @@ public class VisionHandler {
         this.pipelineNameEntry = table.getEntry("pipeline_name");
         this.cameraIdEntry = table.getEntry("camera_id");
         this.exposureEntry = table.getEntry("exposureEntry");
+        this.contourTracker = new ContourTracker();
 
     }
 
 
     public Contour generateContour(int id) {
-        return new NetworkTableContour(table, id);
+        Contour contour = new NetworkTableContour(table, id);
+        contourTracker.track(contour);
+        return contour;
     }
 
     public VisionHandler(int cameraWidth, int cameraHeight) {
