@@ -28,4 +28,8 @@ public class NetworkTableDataSource {
     public double getHeight() {
         return table.getEntry("height" + id).getDouble(0);
     }
+
+    public boolean isUpdated() {
+        return table.getEntry("isUpdated" + id).getBoolean(false);
+    }
 }
