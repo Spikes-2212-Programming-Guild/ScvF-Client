@@ -15,6 +15,8 @@ public interface Contour {
     double getCenterX();
     double getCenterY();
 
+    double getArea();
+
     boolean isUpdated();
 
     Contour use(ContourMiddleware middleware);

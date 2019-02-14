@@ -73,6 +73,11 @@ public class NetworkTableContour implements Contour {
     }
 
     @Override
+    public double getArea() {
+        return getWidth() * getHeight();
+    }
+
+    @Override
     public boolean isUpdated() {
         return source.isUpdated();
     }
