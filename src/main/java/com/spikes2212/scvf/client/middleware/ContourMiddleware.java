@@ -1,4 +1,4 @@
-package com.spikes2212.scvf.client.strategies;
+package com.spikes2212.scvf.client.middleware;
 
 public interface ContourMiddleware {
     double processXAxis(double x);

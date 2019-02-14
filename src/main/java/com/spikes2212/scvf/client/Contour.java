@@ -1,6 +1,6 @@
 package com.spikes2212.scvf.client;
 
-import com.spikes2212.scvf.client.strategies.ContourMiddleware;
+import com.spikes2212.scvf.client.middleware.ContourMiddleware;
 
 public interface Contour {
 

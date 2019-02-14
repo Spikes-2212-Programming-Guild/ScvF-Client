@@ -1,4 +1,4 @@
-package com.spikes2212.scvf.client.strategies;
+package com.spikes2212.scvf.client.middleware;
 
 /**
  * This middleware scales the output of a contour to a percent of its max value.
