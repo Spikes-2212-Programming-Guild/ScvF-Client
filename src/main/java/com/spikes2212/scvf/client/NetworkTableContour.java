@@ -1,6 +1,6 @@
 package com.spikes2212.scvf.client;
 
-import com.spikes2212.scvf.client.strategies.ContourMiddleware;
+import com.spikes2212.scvf.client.middleware.ContourMiddleware;
 import edu.wpi.first.networktables.NetworkTable;
 
 import java.util.LinkedList;
@@ -70,6 +70,11 @@ public class NetworkTableContour implements Contour {
     @Override
     public double getCenterY() {
         return getY() + getHeight() / 2;
+    }
+
+    @Override
+    public double getArea() {
+        return getWidth() * getHeight();
     }
 
     @Override
